@@ -1,24 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Qwackers and Bongo</title>
+  <title>Centered Side-by-Side Images with Captions</title>
   <style>
-    .image-container {
+    .image-row {
       display: flex;
-      justify-content: left; /* aligns images to the left */
-      gap: 10px; /* space between images */
+      justify-content: center; /* centers the row */
+      gap: 30px; /* space between the images */
+      margin-top: 50px;
     }
 
-    .image-container img {
-      width: 300px; /* adjust as needed */
+    .image-item {
+      text-align: center;
+    }
+
+    .image-item img {
+      width: 300px; /* adjust image size as needed */
       height: auto;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .caption {
+      font-size: 1.2em;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
-  <div class="image-container">
-    <img src="qwackers.png" alt="Qwackers The Duck">
-    <img src="bongo.png" alt="Bongo The Monkey">
+  <div class="image-row">
+    <div class="image-item">
+      <img src="image1.jpg" alt="Qwackers">
+      <div class="caption">Qwackers</div>
+    </div>
+    <div class="image-item">
+      <img src="image2.jpg" alt="Bongo">
+      <div class="caption">Bongo</div>
+    </div>
   </div>
 </body>
 </html>
